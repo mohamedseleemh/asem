@@ -1,0 +1,57 @@
+{
+  "theme": {
+    "colors": {
+      "primary": "#fbbf24",
+      "secondary": "#059669",
+      "accent": "#1e3a8a",
+      "background": "#0f172a",
+      "text": "#ffffff",
+      "muted": "#64748b"
+    },
+    "fonts": {
+      "arabic": "Cairo",
+      "decorative": "Amiri",
+      "body": "Cairo"
+    },
+    "gradients": {
+      "primary": "from-gold-400 via-emerald-500 to-blue-500",
+      "hero": "from-gray-900 via-blue-900 to-purple-900",
+      "card": "from-white/10 to-white/5"
+    }
+  },
+  "layout": {
+    "direction": "rtl",
+    "headerStyle": "centered",
+    "footerStyle": "detailed",
+    "showScrollIndicator": true,
+    "showFloatingElements": true,
+    "enableAnimations": true,
+    "animationSpeed": "normal"
+  },
+  "design": {
+    "backgroundType": "cosmic",
+    "enableParticles": true,
+    "enableFloatingElements": true,
+    "borderRadius": "rounded-3xl",
+    "spacing": "spacious"
+  },
+  "seo": {
+    "metaTitle": "الشيخ عاصم فايد - معلم ومحفظ القرآن الكريم - خريج الأزهر الشريف",
+    "metaDescription": "تعلم وحفظ القرآن الكريم مع الشيخ عاصم فايد، خريج الأزهر الشريف وحاصل على دبلوم العلوم الشرعية",
+    "keywords": [
+      "القرآن الكريم",
+      "تحفيظ القرآن",
+      "التفسير",
+      "الشيخ عاصم فايد",
+      "الأزهر الشريف",
+      "العلوم الشرعية"
+    ],
+    "ogImage": "/images/og-image.jpg"
+  },
+  "features": {
+    "adminMode": false,
+    "liveEdit": false,
+    "darkMode": false,
+    "analytics": false
+  }
+}
