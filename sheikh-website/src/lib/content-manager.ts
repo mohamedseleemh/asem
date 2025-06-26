@@ -1,6 +1,3 @@
-import fs from 'fs';
-import path from 'path';
-
 // Types for our content structure
 export interface SiteContent {
   site: {
@@ -114,60 +111,8 @@ export interface SiteSettings {
   };
 }
 
-const dataDir = path.join(process.cwd(), 'data');
-
-// Server-side functions for reading/writing data
-export function getContent(): SiteContent {
-  try {
-    const contentPath = path.join(dataDir, 'content.json');
-    const contentData = fs.readFileSync(contentPath, 'utf8');
-    return JSON.parse(contentData);
-  } catch (error) {
-    console.error('Error reading content:', error);
-    throw new Error('Failed to load content');
-  }
-}
-
-export function getSettings(): SiteSettings {
-  try {
-    const settingsPath = path.join(dataDir, 'settings.json');
-    const settingsData = fs.readFileSync(settingsPath, 'utf8');
-    return JSON.parse(settingsData);
-  } catch (error) {
-    console.error('Error reading settings:', error);
-    throw new Error('Failed to load settings');
-  }
-}
-
-export function updateContent(newContent: Partial<SiteContent>): void {
-  try {
-    const currentContent = getContent();
-    const updatedContent = { ...currentContent, ...newContent };
-
-    const contentPath = path.join(dataDir, 'content.json');
-    fs.writeFileSync(contentPath, JSON.stringify(updatedContent, null, 2), 'utf8');
-  } catch (error) {
-    console.error('Error updating content:', error);
-    throw new Error('Failed to update content');
-  }
-}
-
-export function updateSettings(newSettings: Partial<SiteSettings>): void {
-  try {
-    const currentSettings = getSettings();
-    const updatedSettings = { ...currentSettings, ...newSettings };
-
-    const settingsPath = path.join(dataDir, 'settings.json');
-    fs.writeFileSync(settingsPath, JSON.stringify(updatedSettings, null, 2), 'utf8');
-  } catch (error) {
-    console.error('Error updating settings:', error);
-    throw new Error('Failed to update settings');
-  }
-}
-
 // Client-side hooks and utilities
 export function useContent() {
-  // This will be used in client components via API routes
   return {
     updateContent: async (updates: Partial<SiteContent>) => {
       const response = await fetch('/api/content', {
