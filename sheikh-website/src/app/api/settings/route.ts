@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getSettings, updateSettings } from '@/lib/content-manager';
+import { getSettings, updateSettings } from '@/lib/data';
 
 export async function GET() {
   try {
