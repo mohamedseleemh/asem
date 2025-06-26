@@ -1,4 +1,4 @@
-import { getContent, getSettings } from '@/lib/content-manager';
+import { getContent, getSettings } from '@/lib/data';
 import ServicesPage from '@/components/pages/ServicesPage';
 
 export default async function Page() {
