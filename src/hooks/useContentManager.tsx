@@ -79,8 +79,8 @@ export interface WebsiteContent {
 const defaultContent: WebsiteContent = {
   hero: {
     title: 'الشيخ عاصم فايد',
-    subtitle: 'رحلة في أعماق القرآن الكريم والإعجاز العلمي',
-    description: 'استكشف عظمة الخلق من خلال آيات الله في الكون والطبيعة - دروس قرآنية معاصرة',
+    subtitle: 'معلم ومحفظ القرآن الكريم - خريج الأزهر الشريف',
+    description: 'رحلة في تعليم وتحفيظ القرآن الكريم - دروس قرآنية أصيلة من خريج الأزهر الشريف',
   },
   colors: {
     primary: '#1e3a8a',
